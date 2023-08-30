@@ -13,7 +13,7 @@ import NavBar from './components/NavBar/NavBar';
 import Index from './pages/Index/Index'
 
 //import css
-import './index.css';
+// import './index.css';
 
 function App() {
   const [user, setUser] = useState(getUser());
@@ -28,7 +28,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Index />}/>
             <Route path="/orders/new/" element={<NewOrderPage user={user} setUser={setUser} />}/>
-            <Route path="/orders/history/" element={<OrderHistoryPage  user={user}/>}/>
+            <Route path="/orders/history/" element={<OrderHistoryPage  user={user}  setUser={setUser}/>}/>
             {/* redirect to /orders/new if path in address bar hasn't matched a <Route> above */}
             <Route path="/*" element={<Index />} />
           </Routes>

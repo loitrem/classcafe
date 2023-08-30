@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './CategoryList.css';
+import styles from './CategoryList.module.css';
 
 function CategoryList({ categories, activeCat, setActiveCat }) {
     const cats = categories.map(cat =>

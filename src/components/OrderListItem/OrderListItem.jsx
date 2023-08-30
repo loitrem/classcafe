@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './OrderListItem.css';
+import styles from './OrderListItem.module.css';
 
 function OrderListItem({ order, isSelected, handleSelectOrder }) {
     return (

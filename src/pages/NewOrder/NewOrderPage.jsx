@@ -50,7 +50,7 @@ function NewOrderPage({ user, setUser }) {
 
   async function handleCheckout() {
     await ordersAPI.checkout();
-    navigate('/orders');
+    navigate('/orders/history');
   }
 
   return (
