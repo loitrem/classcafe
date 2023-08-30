@@ -1,5 +1,4 @@
 const Order = require('../../models/Order');
-const Item = require('../../models/Item');
 
 module.exports = {
     cart,
