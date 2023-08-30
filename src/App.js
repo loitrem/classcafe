@@ -27,7 +27,7 @@ function App() {
           <NavBar user={user} setUser={setUser}/>
           <Routes>
             <Route path="/" element={<Index />}/>
-            <Route path="/orders/new/" element={<NewOrderPage />}/>
+            <Route path="/orders/new/" element={<NewOrderPage user={user} setUser={setUser} />}/>
             <Route path="/orders/history/" element={<OrderHistoryPage  user={user}/>}/>
             {/* redirect to /orders/new if path in address bar hasn't matched a <Route> above */}
             <Route path="/*" element={<Index />} />
