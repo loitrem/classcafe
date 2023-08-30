@@ -20,13 +20,17 @@ const create = async (req, res) => {
 };
 
 const login = async (req, res) => {
+  const isMatch=false;
   try {
     // Find the user by their email
     const user = await User.findOne({ email: req.body.email });
+    await User.updateOne(user.email, req.body)
 
-    const isMatch = await bcrypt.compare(req.body.password, user.password);
-
-    if (!isMatch) throw new Error();
+    // if (req.body.password){
+    //   isMatch = await bcrypt.compare(req.body.password, user.password);
+    // }
+    
+    // if (isMatch) throw new Error();
 
     res.status(200).json(createJWT(user));
   } catch (err) {
@@ -52,4 +56,5 @@ module.exports = {
   create,
   login,
   checkToken,
+  update
 };
